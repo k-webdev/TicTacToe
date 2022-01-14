@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
 </head>
+
 <body>
-    
+    <div class="sortBG">
+        <div class="displayPlayer">
+            <h1 id="getPlayerName">
+                Spieler 1 ist drann!
+            </h1>
+        </div>
+        <div class="table-body">
+            <table>
+                <tr>
+                    <td onclick="setSign(0)">
+                        <img class="imgSize d-none" id="circle0" src="./img/circle.png">
+                        <img class="imgSize d-none" id="cross0" src="./img/cross.png">
+                    </td>
+                    <td onclick="setSign(1)">
+                        <img class="imgSize d-none" id="circle1" src="./img/circle.png">
+                        <img class="imgSize d-none" id="cross1" src="./img/cross.png">
+                    </td>
+                    <td onclick="setSign(2)">
+                        <img class="imgSize d-none" id="circle2" src="./img/circle.png">
+                        <img class="imgSize d-none" id="cross2" src="./img/cross.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="setSign(3)">
+                        <img class="imgSize d-none" id="circle3" src="./img/circle.png">
+                        <img class="imgSize d-none" id="cross3" src="./img/cross.png">
+                    </td>
+                    <td onclick="setSign(4)">
+                        <img class="imgSize d-none" id="circle4" src="./img/circle.png">
+                        <img class="imgSize d-none" id="cross4" src="./img/cross.png">
+                    </td>
+                    <td onclick="setSign(5)">
+                        <img class="imgSize d-none" id="circle5" src="./img/circle.png">
+                        <img class="imgSize d-none" id="cross5" src="./img/cross.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="setSign(6)">
+                        <img class="imgSize d-none" id="circle6" src="./img/circle.png">
+                        <img class="imgSize d-none" id="cross6" src="./img/cross.png">
+                    </td>
+                    <td onclick="setSign(7)">
+                        <img class="imgSize d-none" id="circle7" src="./img/circle.png">
+                        <img class="imgSize d-none" id="cross7" src="./img/cross.png">
+                    </td>
+                    <td onclick="setSign(8)">
+                        <img class="imgSize d-none" id="circle8" src="./img/circle.png">
+                        <img class="imgSize d-none" id="cross8" src="./img/cross.png">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
 </body>
+
 </html>
