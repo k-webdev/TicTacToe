@@ -1,6 +1,7 @@
 html{
     scroll-behavior: smooth;
     user-select: none;
+    font-family: 'Mochiy Pop P One', sans-serif;
 }
 
 body{
@@ -64,6 +65,9 @@ td:hover{
 
 .startScreenDesign{
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     width: 100%;
     height: 100vh;
     z-index: 100;
@@ -71,15 +75,59 @@ td:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(./img/art.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.btnStart{
+    width: 300px;
+    height: 50px;
+    border-radius: 16px;
+    background-color: burlywood;
+    cursor: pointer;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: white;
+    font-size: 21px;
 }
 
 .startScreenSub{
+    margin-left: 546px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     width: 50%;
+    text-align: center;
+}
+
+.startScreenSub h1, p{
+    color: burlywood;
+}
+
+.startScreenSub h1{
+    font-size: 50px;
+}
+
+.startScreenSub p{
+    font-size: 26px;
+}
+
+.startScreenSub input{
+    height: 50px;
+    font-size: 25px;
+    border-radius: 16px;
+    text-align: center;
+    border: none;
+    color: burlywood;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.startScreenSub input:focus{
+    outline: none;
 }
 
 .button-container{
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: flex-end;   
@@ -113,7 +161,7 @@ td:hover{
 
 .restart-btn{
     background-color: hsl(249deg 84% 27%);
-    width: 200px;
+    width: 121px;
     height: 50px;
     border-radius: 16px;
     margin-top: 20px;
@@ -122,6 +170,7 @@ td:hover{
     color: white;
     font-weight: bold;
     font-size: 21px;
+    box-shadow: 0px 0px 25px 13px rgba(255,255,255,0.5);
 }
 
 @keyframes zoomIn{
