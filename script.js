@@ -1,8 +1,9 @@
-let playerCount = 0;
+let playerCount = 0; // no reset on restart button because the beginnig player is changing
 let fields = [];
 let player1 = '';
 let player2 = '';
 let gameOver = false;
+let winner;
 
 function loadFirstPlayer() {
     document.getElementById('getPlayerName').innerHTML = player1 + ' ist dran.';
@@ -14,6 +15,7 @@ function setSign(index) {
 }
 
 function start() {
+    document.getElementById('restart-btn').style = `z-index: 200;`;
     document.getElementById('startScreen').classList.remove('startScreenDesign');
     document.getElementById('startScreen').classList.add('d-none');
     getPlayerName();
@@ -35,7 +37,7 @@ function player(index) {
         }
     }
 }
-let winner;
+
 function checkForWinner() {
 
     if (fields[0] == fields[1] && fields[1] == fields[2] && fields[0]) {
@@ -96,4 +98,35 @@ function checkForWinner() {
 function getPlayerName() {
     player1 = document.getElementById('player1-name').value;
     player2 = document.getElementById('player2-name').value;
+}
+
+function restartGame() {
+    gameOver = false;
+    removeAndResetValuesAndClasses();
+    removeLines();
+    removeImagesOnField()
+    fields = [];
+    document.getElementById('restart-btn').style = `z-index: 0;`;
+}
+
+function removeLines() {
+    for (let i = 0; i < 8; i++) {
+        document.getElementById('line-' + i).classList.add('d-none');
+    }
+}
+
+function removeAndResetValuesAndClasses(){
+    document.getElementById('gameOverEnable').classList.add('d-none');
+    document.getElementById('gameOverEnable').classList.remove('gameOverSort');
+    document.getElementById('startScreen').classList.remove('d-none');
+    document.getElementById('startScreen').classList.add('startScreenDesign');
+    document.getElementById('player1-name').value = '';
+    document.getElementById('player2-name').value = '';
+}
+
+function removeImagesOnField(){
+    for (let i = 0; i < fields.length; i++) {
+        document.getElementById(`cross${i}`).classList.add('d-none');
+        document.getElementById(`circle${i}`).classList.add('d-none');
+    }
 }

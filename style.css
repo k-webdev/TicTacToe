@@ -21,16 +21,16 @@ body{
 
 .imgSize{
     position: absolute;
-    width: 150px;
-    height: 150px;
-    left: 29px;
-    top: 29px;
+    width: 75px;
+    height: 75px;
+    left: 16px;
+    top: 16px;
 }
 
 td{
     cursor: pointer;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border: 4px solid;
     position: relative;
 }
@@ -46,7 +46,7 @@ td:hover{
 
 .displayPlayer h1{
     margin: 0 0 50px 0;
-    color: cornflowerblue;
+    color: #1c0b7f;
 }
 
 .sortBG{
@@ -57,7 +57,7 @@ td:hover{
     text-align: center;
     height: 100vh;
     width: 100%;
-    background-image: url(./img/jungle.jpg);
+    background-image: url(./img/paper.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -86,10 +86,10 @@ td:hover{
 }
 
 .horizontal-line{
-    z-index: 50;/* muss das sein? */
+    z-index: 50;
     height: 10px;
     background-color: rgba(0,0,0,0.5);
-    width: 500px;
+    width: 300px;
     position: absolute;
     transform: scaleX(0.0);
     transition: transform 225ms ease-in-out;
@@ -109,6 +109,19 @@ td:hover{
     width: 100%;
     height: 100vh;
     animation: zoomIn 600ms ease-in-out;
+}
+
+.restart-btn{
+    background-color: hsl(249deg 84% 27%);
+    width: 200px;
+    height: 50px;
+    border-radius: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    z-index: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 21px;
 }
 
 @keyframes zoomIn{
